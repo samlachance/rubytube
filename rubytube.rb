@@ -44,6 +44,11 @@ class Video
       # Creates new video object for each result
       Video.new(title, length, url)
     end
+
+    # This line checks to see if any objects were created and will retry the search if it failed.
+    if all[0] == nil
+      parse(search_item)
+    end
   end  
 end
 
