@@ -12,7 +12,7 @@ class Video
 
   # Launches VLC with Youtube URL
   def watch
-    
+
     `vlc http://www.youtube.com/#{url}`
   end
 
@@ -49,10 +49,10 @@ class Video
     # This line checks to see if any objects were created and will retry the search if it failed.
     if all[0] == nil
       parse(search_item)
-    end
-
-    # Calls organize method to organize the search results
-    organize
+    else
+      # Calls organize method to organize the search results
+      organize
+    end    
   end  
 end
 
