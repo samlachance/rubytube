@@ -12,6 +12,7 @@ class Video
 
   # Launches VLC with Youtube URL
   def watch
+    
     `vlc http://www.youtube.com/#{url}`
   end
 
@@ -49,6 +50,9 @@ class Video
     if all[0] == nil
       parse(search_item)
     end
+
+    # Calls organize method to organize the search results
+    organize
   end  
 end
 
@@ -60,9 +64,6 @@ search = gets
 
 # Runs a search with user input
 Video.parse(search) 
-
-# Organizes the results and then lists them
-Video.organize
 
 # Asks the user what video they would like to watch
 puts "Which video would you like to watch?"
