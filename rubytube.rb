@@ -25,7 +25,7 @@ class Video
   def self.organize
     # Calls the title method on each object and then prints the title in an ordered list
     all.map(&:title).each.with_index(1) do |value, index|
-      puts "#{index}: #{value}"
+      puts "#{index}) #{value}"
     end
   end
 
